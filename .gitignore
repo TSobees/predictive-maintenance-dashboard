@@ -1,0 +1,37 @@
+# Local environments and generated files
+.venv/
+venv/
+.ml_runtime/
+.maintenance_build/
+__pycache__/
+*.py[cod]
+*.sqlite*
+*.db
+*.db-*
+*.log
+*.pid
+.test_tmp/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+maintenance_app/data/analytics_config.json
+maintenance_app/data/preview.*
+local_data/
+dist/
+build/
+*.zip
+~$*.xlsx
+.DS_Store
+Thumbs.db
+
+# Personal workbooks and authoring sidecars
+local_data/
+*.inspect.ndjson
+*.preview.png
+
+# Local Excel workbooks are never published
+*.xlsx
+*.xls
+*.xlsm

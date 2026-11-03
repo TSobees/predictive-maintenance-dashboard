@@ -1,0 +1,81 @@
+{
+  "release": "Public portfolio demonstration",
+  "prepared_date": "2026-11-03",
+  "license": "MIT",
+  "intended_visibility": "public",
+  "publication_status": "Verification describes the prepared source snapshot; repository publication state is managed on GitHub.",
+  "backend": {
+    "result": "PASS",
+    "tests_run": 46,
+    "passed": 46,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "environment": "Fresh Python 3.12 virtual environment installed from repository requirements. pip check passed. No local model runtime used.",
+    "python_compilation": "PASS"
+  },
+  "browser": {
+    "result": "PASS",
+    "desktop": true,
+    "mobile_no_horizontal_overflow": true,
+    "top_5_10_20": true,
+    "station_filters": true,
+    "event_drilldown": true,
+    "csv_download": true,
+    "three_horizon_forecasts": true,
+    "demo_evaluation": true,
+    "no_visible_local_paths_in_screenshots": true,
+    "console_errors": [],
+    "http_errors": []
+  },
+  "privacy": {
+    "result": "PASS",
+    "prepared_date": "2026-11-03",
+    "public_data": "Independent synthetic records only",
+    "private_data_and_private_models_copied": false,
+    "scanned_files": 86,
+    "common_credential_and_private_identifier_findings": [],
+    "excel_files_excluded_from_public_index": true,
+    "csv_default_source": "PASS",
+    "fitted_encoder_categories_checked": true,
+    "notebook_code_executed": "PASS",
+    "notebook_outputs_cleared": true,
+    "original_workbook_and_selected_models_preserved": true,
+    "limit": "Pattern and provenance checks are not a comprehensive security audit."
+  },
+  "fresh_dependencies_installed": true,
+  "pip_check": "PASS",
+  "remote_github_actions": "Configured; not run before publication.",
+  "training": {
+    "result": "PASS",
+    "source": "Generated public demonstration only",
+    "source_sha256": "81d99b4da1731670faf87b81d5c53a0f76c1cffdc9fa0504903dd0e888435c7f",
+    "chronological_horizon_purge": true,
+    "fixed_configuration": {
+      "feature_set": "core",
+      "weight_mode": "none",
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "min_samples_leaf": 25,
+      "subsample": 0.8
+    },
+    "trees": 80,
+    "serialization_roundtrip": true,
+    "separate_calibration_and_threshold_validation": true,
+    "coherent_horizons": true,
+    "test_not_used_for_selection": true,
+    "source_format": "csv",
+    "source_files": [
+      "assets.csv",
+      "events.csv",
+      "observations.csv"
+    ]
+  },
+  "screenshots": "Captured from an isolated fictional-data instance, visually reviewed.",
+  "private_working_app": "Original workbook and selected fitted models preserved.",
+  "excluded_from_publication": [
+    "analytics_workbook.xlsx",
+    "training_dataset.xlsx"
+  ],
+  "default_source": "Synthetic CSV bundle; Excel files are local-only."
+}

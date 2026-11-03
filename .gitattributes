@@ -1,0 +1,12 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf
+*.txt text eol=lf
+*.csv -text
+*.cmd -text
+*.xlsx binary
+*.joblib binary
+*.cbm binary

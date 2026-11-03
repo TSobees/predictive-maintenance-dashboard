@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "source": "Generated public demonstration only",
+  "source_sha256": "81d99b4da1731670faf87b81d5c53a0f76c1cffdc9fa0504903dd0e888435c7f",
+  "chronological_horizon_purge": true,
+  "fixed_configuration": {
+    "feature_set": "core",
+    "weight_mode": "none",
+    "max_depth": 2,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 25,
+    "subsample": 0.8
+  },
+  "trees": 80,
+  "serialization_roundtrip": true,
+  "separate_calibration_and_threshold_validation": true,
+  "coherent_horizons": true,
+  "test_not_used_for_selection": true,
+  "source_format": "csv",
+  "source_files": [
+    "assets.csv",
+    "events.csv",
+    "observations.csv"
+  ]
+}

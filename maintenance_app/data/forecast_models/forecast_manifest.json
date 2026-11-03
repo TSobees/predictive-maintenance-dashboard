@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "algorithm": "GradientBoostingClassifier",
+  "model_display_name": "Gradient Boosting (synthetic demo)",
+  "default_policy": "catch_more",
+  "policy_definitions": {
+    "catch_more": {
+      "label": "Catch more failures",
+      "definition": "Highest validation threshold reaching 80% failure-window recall."
+    }
+  },
+  "synthetic_data": true,
+  "dataset_revision": "Independent synthetic public demonstration",
+  "source_workbook": "Synthetic CSV demo bundle",
+  "coverage_start": "2025-10-06 06:00:00",
+  "coverage_end": "2026-10-06 06:00:00",
+  "context_last_timestamp": "2026-10-05 06:00:00",
+  "seed": 271828,
+  "evaluation_limit": "Held-out dates within an invented simulation. No real records or field validation; no equipment-transfer evaluation.",
+  "search_trials": 1,
+  "cross_validation_folds": 0,
+  "reserved_equipment_ids": [],
+  "dataset_summary": {
+    "assets": 48,
+    "observations": 2544,
+    "source": "Synthetic public demonstration"
+  },
+  "horizons": {
+    "7": {
+      "model_files": [
+        "demo_7d.joblib"
+      ],
+      "trees_per_model": 80,
+      "features": [
+        "Station",
+        "Equipment Class",
+        "Operating Status",
+        "Operating Hours Last 24h",
+        "Cumulative Operating Hours",
+        "Hours Since Last Synthetic Maintenance",
+        "Prior Synthetic Breakdowns 30d",
+        "Bearing Temperature (C)",
+        "Vibration RMS (mm/s)",
+        "Motor Load (%)",
+        "Pressure (bar)",
+        "Inspection Score (0-100)",
+        "Equipment Age (days)",
+        "Simulated Criticality (1-5)",
+        "Simulated Typical Daily Hours"
+      ],
+      "configuration": {
+        "feature_set": "core",
+        "weight_mode": "none",
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 25,
+        "subsample": 0.8
+      },
+      "calibration": {
+        "method": "sigmoid",
+        "slope": 0.4276345177570323,
+        "intercept": -1.6759152539307058
+      },
+      "periods": {
+        "training": {
+          "start": "2025-10-06 06:00:00",
+          "end": "2026-03-16 06:00:00",
+          "n": 1128
+        },
+        "calibration": {
+          "start": "2026-03-30 06:00:00",
+          "end": "2026-05-18 06:00:00",
+          "n": 376
+        },
+        "validation": {
+          "start": "2026-06-01 06:00:00",
+          "end": "2026-07-20 06:00:00",
+          "n": 376
+        },
+        "test": {
+          "start": "2026-08-03 06:00:00",
+          "end": "2026-09-28 06:00:00",
+          "n": 423
+        }
+      },
+      "policies": {
+        "catch_more": {
+          "threshold": 0.06650631535959331,
+          "validation_metrics": {
+            "n": 376,
+            "failures": 30,
+            "true_positive": 24,
+            "false_positive": 105,
+            "false_negative": 6,
+            "true_negative": 241,
+            "recall": 0.8,
+            "precision": 0.18604651162790697,
+            "alert_fraction": 0.34308510638297873,
+            "prevalence": 0.0797872340425532,
+            "accuracy": 0.7047872340425532,
+            "balanced_accuracy": 0.7482658959537573,
+            "average_precision": 0.16532792006222458,
+            "roc_auc": 0.7638728323699422,
+            "brier_score": 0.07132485401048266,
+            "inspections_per_detected_failure": 5.375
+          },
+          "test_metrics": {
+            "n": 423,
+            "failures": 38,
+            "true_positive": 22,
+            "false_positive": 116,
+            "false_negative": 16,
+            "true_negative": 269,
+            "recall": 0.5789473684210527,
+            "precision": 0.15942028985507245,
+            "alert_fraction": 0.3262411347517731,
+            "prevalence": 0.08983451536643026,
+            "accuracy": 0.6879432624113475,
+            "balanced_accuracy": 0.6388243335611756,
+            "average_precision": 0.16996810471805318,
+            "roc_auc": 0.7359193438140806,
+            "brier_score": 0.08075571362529678,
+            "inspections_per_detected_failure": 6.2727272727272725
+          }
+        }
+      },
+      "transfer_metrics": {
+        "catch_more": null
+      }
+    },
+    "14": {
+      "model_files": [
+        "demo_14d.joblib"
+      ],
+      "trees_per_model": 80,
+      "features": [
+        "Station",
+        "Equipment Class",
+        "Operating Status",
+        "Operating Hours Last 24h",
+        "Cumulative Operating Hours",
+        "Hours Since Last Synthetic Maintenance",
+        "Prior Synthetic Breakdowns 30d",
+        "Bearing Temperature (C)",
+        "Vibration RMS (mm/s)",
+        "Motor Load (%)",
+        "Pressure (bar)",
+        "Inspection Score (0-100)",
+        "Equipment Age (days)",
+        "Simulated Criticality (1-5)",
+        "Simulated Typical Daily Hours"
+      ],
+      "configuration": {
+        "feature_set": "core",
+        "weight_mode": "none",
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 25,
+        "subsample": 0.8
+      },
+      "calibration": {
+        "method": "sigmoid",
+        "slope": 0.5712685301134793,
+        "intercept": -0.9449016529021351
+      },
+      "periods": {
+        "training": {
+          "start": "2025-10-06 06:00:00",
+          "end": "2026-03-09 06:00:00",
+          "n": 1081
+        },
+        "calibration": {
+          "start": "2026-03-30 06:00:00",
+          "end": "2026-05-11 06:00:00",
+          "n": 329
+        },
+        "validation": {
+          "start": "2026-06-01 06:00:00",
+          "end": "2026-07-13 06:00:00",
+          "n": 329
+        },
+        "test": {
+          "start": "2026-08-03 06:00:00",
+          "end": "2026-09-21 06:00:00",
+          "n": 376
+        }
+      },
+      "policies": {
+        "catch_more": {
+          "threshold": 0.13014074129565656,
+          "validation_metrics": {
+            "n": 329,
+            "failures": 54,
+            "true_positive": 44,
+            "false_positive": 89,
+            "false_negative": 10,
+            "true_negative": 186,
+            "recall": 0.8148148148148148,
+            "precision": 0.3308270676691729,
+            "alert_fraction": 0.40425531914893614,
+            "prevalence": 0.1641337386018237,
+            "accuracy": 0.6990881458966566,
+            "balanced_accuracy": 0.7455892255892256,
+            "average_precision": 0.3318097283612294,
+            "roc_auc": 0.7804713804713805,
+            "brier_score": 0.1276117431460903,
+            "inspections_per_detected_failure": 3.022727272727273
+          },
+          "test_metrics": {
+            "n": 376,
+            "failures": 67,
+            "true_positive": 41,
+            "false_positive": 104,
+            "false_negative": 26,
+            "true_negative": 205,
+            "recall": 0.6119402985074627,
+            "precision": 0.2827586206896552,
+            "alert_fraction": 0.38563829787234044,
+            "prevalence": 0.17819148936170212,
+            "accuracy": 0.6542553191489362,
+            "balanced_accuracy": 0.6376853596097184,
+            "average_precision": 0.30680081248301105,
+            "roc_auc": 0.7307878085301647,
+            "brier_score": 0.14145406718221076,
+            "inspections_per_detected_failure": 3.5365853658536586
+          }
+        }
+      },
+      "transfer_metrics": {
+        "catch_more": null
+      }
+    },
+    "30": {
+      "model_files": [
+        "demo_30d.joblib"
+      ],
+      "trees_per_model": 80,
+      "features": [
+        "Station",
+        "Equipment Class",
+        "Operating Status",
+        "Operating Hours Last 24h",
+        "Cumulative Operating Hours",
+        "Hours Since Last Synthetic Maintenance",
+        "Prior Synthetic Breakdowns 30d",
+        "Bearing Temperature (C)",
+        "Vibration RMS (mm/s)",
+        "Motor Load (%)",
+        "Pressure (bar)",
+        "Inspection Score (0-100)",
+        "Equipment Age (days)",
+        "Simulated Criticality (1-5)",
+        "Simulated Typical Daily Hours"
+      ],
+      "configuration": {
+        "feature_set": "core",
+        "weight_mode": "none",
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "min_samples_leaf": 25,
+        "subsample": 0.8
+      },
+      "calibration": {
+        "method": "sigmoid",
+        "slope": 0.38250429380525736,
+        "intercept": -0.7533220229812768
+      },
+      "periods": {
+        "training": {
+          "start": "2025-10-06 06:00:00",
+          "end": "2026-02-23 06:00:00",
+          "n": 987
+        },
+        "calibration": {
+          "start": "2026-03-30 06:00:00",
+          "end": "2026-04-27 06:00:00",
+          "n": 235
+        },
+        "validation": {
+          "start": "2026-06-01 06:00:00",
+          "end": "2026-06-29 06:00:00",
+          "n": 235
+        },
+        "test": {
+          "start": "2026-08-03 06:00:00",
+          "end": "2026-08-31 06:00:00",
+          "n": 235
+        }
+      },
+      "policies": {
+        "catch_more": {
+          "threshold": 0.2165444709408174,
+          "validation_metrics": {
+            "n": 235,
+            "failures": 85,
+            "true_positive": 68,
+            "false_positive": 66,
+            "false_negative": 17,
+            "true_negative": 84,
+            "recall": 0.8,
+            "precision": 0.5074626865671642,
+            "alert_fraction": 0.5702127659574469,
+            "prevalence": 0.3617021276595745,
+            "accuracy": 0.6468085106382979,
+            "balanced_accuracy": 0.68,
+            "average_precision": 0.578453064918631,
+            "roc_auc": 0.7481568627450981,
+            "brier_score": 0.22232708766201725,
+            "inspections_per_detected_failure": 1.9705882352941178
+          },
+          "test_metrics": {
+            "n": 235,
+            "failures": 91,
+            "true_positive": 75,
+            "false_positive": 68,
+            "false_negative": 16,
+            "true_negative": 76,
+            "recall": 0.8241758241758241,
+            "precision": 0.5244755244755245,
+            "alert_fraction": 0.6085106382978723,
+            "prevalence": 0.3872340425531915,
+            "accuracy": 0.6425531914893617,
+            "balanced_accuracy": 0.675976800976801,
+            "average_precision": 0.49947521174367404,
+            "roc_auc": 0.6815857753357754,
+            "brier_score": 0.24447408314670985,
+            "inspections_per_detected_failure": 1.9066666666666667
+          }
+        }
+      },
+      "transfer_metrics": {
+        "catch_more": null
+      }
+    }
+  },
+  "source_sha256": "81d99b4da1731670faf87b81d5c53a0f76c1cffdc9fa0504903dd0e888435c7f",
+  "source_format": "csv",
+  "source_files": [
+    "assets.csv",
+    "events.csv",
+    "observations.csv"
+  ]
+}

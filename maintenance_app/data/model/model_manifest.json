@@ -1,0 +1,26 @@
+{
+  "features": [
+    "Station",
+    "Equipment Class",
+    "Operating Status",
+    "Operating Hours Last 24h",
+    "Cumulative Operating Hours",
+    "Hours Since Last Synthetic Maintenance",
+    "Prior Synthetic Breakdowns 30d",
+    "Bearing Temperature (C)",
+    "Vibration RMS (mm/s)",
+    "Motor Load (%)",
+    "Pressure (bar)",
+    "Inspection Score (0-100)",
+    "Equipment Age (days)",
+    "Simulated Criticality (1-5)",
+    "Simulated Typical Daily Hours"
+  ],
+  "source_sha256": "81d99b4da1731670faf87b81d5c53a0f76c1cffdc9fa0504903dd0e888435c7f",
+  "source_format": "csv",
+  "source_files": [
+    "assets.csv",
+    "events.csv",
+    "observations.csv"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "seed": 314159,
+  "start": "2025-10-06 06:00:00",
+  "observation_end": "2026-10-05 06:00:00",
+  "coverage_end": "2026-10-06 06:00:00",
+  "equipment_count": 48,
+  "observation_count": 2544,
+  "work_records": 750,
+  "provenance": "Independent fictional simulation. No workbook, company records or original equipment register used.",
+  "label_definition": "At least one distinct breakdown episode strictly after observation and within horizon; incomplete horizons are excluded.",
+  "license": "MIT",
+  "warning": "Simulation performance cannot establish field performance."
+}

@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Synthetic demonstration evaluation</title><style>body{font:16px/1.6 system-ui;max-width:1100px;margin:40px auto;padding:20px}td,th{padding:8px;border:1px solid #ddd}table{border-collapse:collapse}</style><h1>Synthetic demonstration evaluation</h1><p>All equipment, readings and events are fictional. Fixed configuration; fit on earlier dates, sigmoid mapping on a later calibration period, thresholds on validation, then evaluated on held-out dates. Outcome horizons are purged across boundaries.</p><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>horizon_days</th>
+      <th>n</th>
+      <th>failures</th>
+      <th>recall</th>
+      <th>precision</th>
+      <th>alert_fraction</th>
+      <th>roc_auc</th>
+      <th>average_precision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7</td>
+      <td>423</td>
+      <td>38</td>
+      <td>0.579</td>
+      <td>0.159</td>
+      <td>0.326</td>
+      <td>0.736</td>
+      <td>0.170</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>376</td>
+      <td>67</td>
+      <td>0.612</td>
+      <td>0.283</td>
+      <td>0.386</td>
+      <td>0.731</td>
+      <td>0.307</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>235</td>
+      <td>91</td>
+      <td>0.824</td>
+      <td>0.524</td>
+      <td>0.609</td>
+      <td>0.682</td>
+      <td>0.499</td>
+    </tr>
+  </tbody>
+</table><p>Metrics count overlapping equipment-observation windows, not necessarily distinct failures. No transfer or field validation was performed. Approved schedules remain independent of the classifier.</p></html>
