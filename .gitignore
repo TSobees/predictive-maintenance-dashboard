@@ -35,3 +35,4 @@ local_data/
 *.xlsx
 *.xls
 *.xlsm
+backups/

@@ -2,6 +2,7 @@
 from services import MaintenanceService,MODEL,ROOT
 from planning import ACTIVE_POLICY,STRATEGY
 from analytics import WorkbookAnalytics
+from calendar_export import export_calendar
 from flask import Flask,render_template,jsonify,request,send_file
 from werkzeug.exceptions import HTTPException
 import io
@@ -138,6 +139,7 @@ def create_app(db_path=None,analytics_source=None,analytics_config=None,analytic
         files={'template':('new_observations_template.csv','new_observations_template.csv'),
                'example':('historical_example_input.csv','historical_example_input.csv')}
         if kind in files:return send_file(MODEL/files[kind][0],as_attachment=True,download_name=files[kind][1])
+        if kind=='calendar':return send_file(io.BytesIO(export_calendar(service.plans())),mimetype='text/calendar',as_attachment=True,download_name='approved_maintenance.ics')
         if kind=='plans':return csv_response(service.maintenance_status()['plans'],'maintenance_schedule.csv')
         if kind=='events':return csv_response(service.events(),'observed_maintenance_events.csv')
         if kind=='observations':return csv_response(service.observations(),'supplied_operating_observations.csv')
