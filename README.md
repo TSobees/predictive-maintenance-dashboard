@@ -9,6 +9,7 @@ A working Python dashboard for maintenance schedules, equipment failure-risk for
 ## Features
 
 - Plan approved calendar and cumulative operating-hour maintenance, flag overdue work and record completions.
+- Export approved dated tasks as an iCalendar snapshot and back up locally entered records with a verified manifest.
 - Select equipment for 7-, 14- and 30-day Gradient Boosting risk estimates, with dated readings, historical replay and score explanations.
 - Use one alert strategy, **Catch more failures**, selected on validation data.
 - Compare stations by total breakdowns and breakdowns per equipment, and rank the top 5, 10 or 20 machines by events or recorded downtime.
@@ -41,6 +42,13 @@ This is a local Flask application. Publishing its repository does not host the a
 
 No approved intervals are assumed. Demonstration tasks and any readings you enter remain in an ignored local SQLite database.
 
+## Calendar and local backups
+
+Use **Maintenance due → Calendar snapshot** to export dated approved tasks. For a
+consistent backup of locally entered records, run `python tools/backup_local.py`.
+See [local operations](docs/OPERATIONS.md) for snapshot limits, backup contents and
+recovery steps. Neither feature changes model probabilities or approved intervals.
+
 ## Model and evaluation
 
 The demo uses one fixed GradientBoostingClassifier configuration for each horizon, training-only preprocessing, a later calibration period, a separate validation period for alert thresholds and later test dates. Outcome windows are purged across period boundaries. A frozen cumulative-maximum rule keeps longer-horizon probabilities nondecreasing. The model reports the risk of at least one failure within the horizon, rather than an exact date or a remaining-life estimate.
@@ -68,7 +76,7 @@ The generator reads no external dataset. It uses a fixed random seed and publish
 python -m unittest discover -s maintenance_app/tests -v
 ```
 
-Tests cover forecast replay, causal features, date and meter schedules, invalid input, transactional completions, workbook refresh/failure retention, CSV escaping and public-data provenance. GitHub Actions is configured to run the suite on Python 3.12. Local validation evidence is in `VERIFICATION.json`; remote CI results become available after upload.
+Tests cover forecast replay, causal features, date and meter schedules, invalid input, transactional completions, workbook refresh/failure retention, CSV escaping and public-data provenance. GitHub Actions is configured to run the suite on Python 3.12. The workflow tests the current branch on GitHub Actions. `VERIFICATION.json` describes the original release; use the latest workflow run for current check status.
 
 ## Architecture
 
