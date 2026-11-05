@@ -1,4 +1,4 @@
-"""Causal event features, coherent multi-horizon risks and review policies."""
+""Causal event features, coherent multi-horizon risks and review policies.""
 from pathlib import Path
 import json
 import maintenance_ml as ml
